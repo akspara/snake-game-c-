@@ -5,10 +5,11 @@
 #include<ctime>
 #include<iostream>
 #include<stdlib.h>
+#include<dos.h>
+#include<windows.h>
 using namespace std;
 #include<conio.h>
 //GLOBAL VARIABLES
-
 int main();
 int play=0;
 int c=0;
@@ -46,13 +47,13 @@ int p,speed;
         switch(p)
     {
         case 1:
-            speed=7000;
+            speed=10000;
             break;
         case 2:
             speed=4000;
             break;
         case 3:
-            speed=10;
+            speed=1;
             break;
         default:
             cout<<"enter right key"<<endl;
@@ -77,7 +78,8 @@ gameover=0;
 
 //FOR MAP OF THE GAME
   void structure()
-{  system("cls");
+{   Sleep(100);
+    system("cls");
    for(int i=1;i<=h;i++)
    {    cout<<endl;
        for(int j=1;j<=w;j++)
@@ -100,14 +102,14 @@ gameover=0;
                 if(print)
                 cout<<" ";}
 
-        }
+    }
 
    }
    cout<<endl<<"score="<<score;
 }
 
 //funtion to detect the input W/A/S/D
-void IN()
+void INput()
 {
    if(kbhit())
  switch(getch())
@@ -229,14 +231,8 @@ int main()
 while(!gameover)
    {
     structure();
-  for(int i=0;i<speed;i++)//to delay the spped can also use delay funtion but this was easy lol
-  {
-      for(int j=0;j<speed;j++)
-      {
 
-      }
-  }
-    IN();
+    INput();
     logic();
 
     }
