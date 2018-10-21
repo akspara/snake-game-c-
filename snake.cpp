@@ -38,7 +38,7 @@ int p,speed;
     cout<<"                      level no 1:(easy)"<<endl;
     cout<<"                      level no 2:(moderate)"<<endl;
     cout<<"                      level no 3:(hard)"<<endl;
-    cout<<"                      (USE w,a,s,d not arrw keys)"<<endl;
+    cout<<"                      (USE w,a,s,d not arrw keys)"<<endl;         //The frame dorp needs to be in creased
 
     ppoy:
 
